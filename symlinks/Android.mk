@@ -9,7 +9,7 @@ LOCAL_MODULE_CLASS := FAKE
 
 include $(BUILD_SYSTEM)/base_rules.mk
 
-$(LOCAL_BUILT_MODULE): TARGET := /system/lib/libion_ti.so
+$(LOCAL_BUILT_MODULE): TARGET := $(TARGET_OUT)/lib/libion_ti.so
 $(LOCAL_BUILT_MODULE): SYMLINK := $(TARGET_OUT)/lib/$(LOCAL_MODULE)
 $(LOCAL_BUILT_MODULE):
 	$(hide) echo "Symlink: $(SYMLINK) -> $(TARGET)"
